@@ -1,0 +1,26 @@
+:root{
+    --main-blue: #6874E8;
+    --main-bg: #F4F4E7;
+    --main-text-color: rgb(0, 0, 0);
+    --sec-text-color: white;
+    --maibn-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.250)
+}
+/* global styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input{
+    outline: none;
+}
+/*  main components and utilities */
+

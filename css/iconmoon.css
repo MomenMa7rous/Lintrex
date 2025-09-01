@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/Lintrex/icomoon/fonts/icomoon.eot?o8tcg7');
+  src:  url('/Lintrex/icomoon/fonts/icomoon.eot?o8tcg7#iefix') format('embedded-opentype'),
+    url('/Lintrex/icomoon/fonts/icomoon.ttf?o8tcg7') format('truetype'),
+    url('/Lintrex/icomoon/fonts/icomoon.woff?o8tcg7') format('woff'),
+    url('/Lintrex/icomoon/fonts/icomoon.svg?o8tcg7#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+  content: "\f00c";
+}
+.icon-cog:before {
+  content: "\f013";
+}
+.icon-gear:before {
+  content: "\f013";
+}
+.icon-folder:before {
+  content: "\f07b";
+}
+.icon-tasks:before {
+  content: "\f0ae";
+}
+.icon-group:before {
+  content: "\f0c0";
+}
+.icon-users:before {
+  content: "\f0c0";
+}
+.icon-info:before {
+  content: "\f129";
+}
+.icon-home:before {
+  content: "\e900";
+}
+.icon-exit:before {
+  content: "\ea14";
+}
