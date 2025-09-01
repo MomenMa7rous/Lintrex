@@ -9,6 +9,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans";
 }
 body{
     overflow-x: hidden;
@@ -23,4 +24,3 @@ input{
     outline: none;
 }
 /*  main components and utilities */
-
