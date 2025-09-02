@@ -37,6 +37,92 @@ wrapper{
     grid-row-gap: 20px;
     position: relative;
     height: 100%;
+    background-color: #F4F4E7;
+}
+/* Header section */
+header{
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: var(--maibn-shadow);
+    background-color: white;
+}
+header img{
+    width: 100%;
+}
+header .input{
+    width: 50%;
+    position: relative;
+}
+header input{
+    width: 100%;
+    height: 41px;
+    padding-left: 48px;
+    border: 1px solid var(--main-stroke);
+    border-radius: 50px;
+}
+header input::placeholder{
+    font-size: 15px;
+    font-weight: 500;
+    color: #8A8A8A;
+}
+header .input i{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8A8A8A;
+}
+header .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    background-color: #F2F2F2;
+    border: 1px solid var(--main-stroke);
+}
+header .user img{
+    width: 23px;
+}
+@media (max-width: 768px){
+    wrapper{
+        grid-template-rows: 55px 1fr;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        grid-gap: 8px;
+    }
+    header .input{
+        width: 100%;
+    }
+    header input{
+        height: 30px;
+        padding-left: 32px;
+    }
+    header .image{
+        min-width: 90px;
+        max-width: 100px;
+        margin-right: 20px;
+    }
+    header input::placeholder{
+        font-size: 12px;
+    }
+    header .input i{
+        left: 12px;
+        font-size: 12px;
+    }
+    header .user{
+        width: 32px;
+        height: 32px;
+    }
+    header .user img{
+        width: 15px;
+    }
 }
 /* Nav section */
 nav{
@@ -124,7 +210,7 @@ nav div ul:nth-child(2) li:last-child{
         gap: 10px;
     }
     nav div ul{
-        gap: 10px;
+        gap: 8px;
     }
     nav div li{
         margin-bottom: 20px;
@@ -136,33 +222,4 @@ nav div ul:nth-child(2) li:last-child{
     nav div li:hover{
         font-size: 4.5vw;
     }
-}
-
-/* Header section */
-header{
-    grid-column: span 2;
-    display: flex;
-    padding: 0 20px;
-}
-header input{
-    width: 50%;
-    border: 1px solid var(--main-stroke);
-    border-radius: 50px;
-}
-.header img{
-    width: 100%;
-}
-.header>div:nth-child(2){
-    flex:1;
-    background-color: red;
-}
-.header div:nth-child(2) .image{
-    width: 42px;
-    height: 42px;
-    border-radius: 100%;
-    background-color: #F2F2F2;
-    border: 1px solid var(--main-stroke);
-}
-.header div:nth-child(2) img{
-    width: 23px;
 }
