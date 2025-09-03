@@ -8,14 +8,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <title>Document</title>
+        <link rel="shortcut icon" href="./imgs/favicon.svg" type="image/x-icon">
+        <title>Lintrex</title>
     </head>
     <body>
         <pop-up>
             <img src="imgs/x-symbol.svg" alt="">
             <form action="">
-                <input type="text" required>
-                <input type="submit" value="Ok">
+                <input type="text" required placeholder="What do you want to do next?...">
+                <input type="submit" value="Add Task">
             </form>
         </pop-up>
         <wrapper>
@@ -37,7 +38,7 @@
                         <li id="home-btn" class="nav-btn"><i class="icon-home"></i></li>
                         <li id="team-btn" class="nav-btn"><i class="icon-users"></i></li>
                         <li id="projects-btn" class="nav-btn"><i class="icon-folder"></i></li>
-                        <li id="tasks-btn" class="nav-btn"><i class="icon-tasks"></i></li>
+                        <li id="schedule-btn" class="nav-btn"><i class="icon-tasks"></i></li>
                         <li id="settings-btn" class="nav-btn"><i class="icon-gear"></i></li>
                     </ul>
                     <ul>
@@ -46,6 +47,9 @@
                     </ul>
                 </div>
             </nav>
+            <section id="home" class="home"></section>
+            <section id="projects" class="projects"></section>
+            <section class="settings" id="settings"></section>
             <section id="schedule">
                 <div class="heading">
                     <h1>Schedule.</h1>
@@ -258,26 +262,26 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="help" class="help">
-            <div class="heading">
-                <h1>Help.</h1>
-                <p>About Us</p>
-            </div>
-            <p>
-                <q>This is Lintrex. A Dashboard Website Template Created With Love By <a href="https://github.com/Abdulrahman-Mostafa53" target="_blank">Abdalrahman Mustafa</a> & <a href="https://github.com/MomenMa7rous" target="_blank">Momen Mahrous</a></q>
-            </p>
-            <div class="actions">
-                <a href="https://github.com/MomenMa7rous/Lintrex" target="_blank">Github Repo</a>
-                <a href="https://github.com/Abdulrahman-Mostafa53" target="_blank">Abdalrahman Mustafa</a>
-                <a href="https://github.com/MomenMa7rous" target="_blank">Momen Mahrous</a>
-            </div>
-        </section>
+            </section>
+            <section id="help" class="help">
+                <div class="heading">
+                    <h1>Help.</h1>
+                    <p>About Us</p>
+                </div>
+                <p>
+                    <q>This is Lintrex. A Dashboard Website Template Created With Love By <a href="https://github.com/Abdulrahman-Mostafa53" target="_blank">Abdalrahman Mustafa</a> & <a href="https://github.com/MomenMa7rous" target="_blank">Momen Mahrous</a></q>
+                </p>
+                <div class="actions">
+                    <a href="https://github.com/MomenMa7rous/Lintrex" target="_blank">Github Repo</a>
+                    <a href="https://github.com/Abdulrahman-Mostafa53" target="_blank">Abdalrahman Mustafa</a>
+                    <a href="https://github.com/MomenMa7rous" target="_blank">Momen Mahrous</a>
+                </div>
+            </section>
     </wrapper>
-        <overlay></overlay>
-        <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
-        <script src="js/schedule-scipt.js"></script>     
-    
+    <overlay></overlay>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <script src="js/schedule-scipt.js"></script>
     <script src="./js/navigation.js"></script>
 </body>
 </html>

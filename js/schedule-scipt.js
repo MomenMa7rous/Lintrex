@@ -43,11 +43,12 @@ submitTaskForm.addEventListener("submit",(e)=>{
     popUp.style.display="none";
     let task=`                            
     <p class="task">
-        <span  title=${taskInput.value}>${taskInput.value}</span>
-        <span class="check-box"><i class="icon-check"></i></span>
+    <span  title=${taskInput.value}>${taskInput.value}</span>
+    <span class="check-box"><i class="icon-check"></i></span>
     </p>`
     taskCont.innerHTML+=task
     window.localStorage.tasks=taskCont.innerHTML
+    taskInput.value = ""
 })
 
 // Finish task
@@ -86,7 +87,7 @@ async function applyAnimation(){
         const newD=document.createElement("div");
         newD.classList.add("done-tasks");
         doneTasksBox.replaceChild(newD,doneTasks);
-        window.localStorage.doneTasks=doneTasksBox.innerHTML
+        window.localStorage.doneTasks=""
      }
      catch(e){
      }
