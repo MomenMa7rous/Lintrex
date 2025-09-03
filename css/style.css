@@ -330,3 +330,47 @@ section.team .team-wrapper .card .job-title {
         grid-template-columns: repeat(5, 1fr);
     }
 }
+/* Help Section */
+section.help {
+    text-align: center;
+}
+
+section.help q {
+    display: block;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+section.help .actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+section.help .actions a {
+    display: block;
+    width: fit-content;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid var(--main-blue);
+}
+
+section.help .actions a:first-of-type {
+    background-color: var(--main-blue);
+    color: #fff;
+}
+
+section.help .actions a:hover {
+    background-color: #5a66d1;
+    border-color: #5a66d1;
+    color: #fff;
+}
