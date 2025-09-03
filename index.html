@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/iconmoon.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    <wrapper>
-        <header>
-            <div class="image">
-                <img src="imgs/logo.svg" alt="">
-            </div>
-            <div class="input">
-                <input type="search" placeholder="Search">
-                <i class="icon-search"></i>
-            </div>
-            <div class="user">
-                <img src="imgs/user.svg" alt="">
-            </div>
-        </header>
-        <nav>
-            <div>
-                <ul>
-                    <li id="home-btn" class="nav-btn"><i class="icon-home"></i></li>
-                    <li id="team-btn" class="nav-btn"><i class="icon-users"></i></li>
-                    <li id="projects-btn" class="nav-btn"><i class="icon-folder"></i></li>
-                    <li id="tasks-btn" class="nav-btn"><i class="icon-tasks"></i></li>
-                    <li id="settings-btn" class="nav-btn"><i class="icon-gear"></i></li>
-                </ul>
-                <ul>
-                    <li id="help-btn" class="nav-btn"><i class="icon-info"></i></li>
-                    <li><i class="icon-exit"></i></li>
-                </ul>
-            </div>
-        </nav>
-        <section id="team" class="team">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/iconmoon.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <body>
+        <pop-up>
+            <img src="imgs/x-symbol.svg" alt="">
+            <form action="">
+                <input type="text" required>
+                <input type="submit" value="Ok">
+            </form>
+        </pop-up>
+        <wrapper>
+            <header>
+                <div class="image">
+                    <img src="imgs/logo.svg" alt="">
+                </div>
+                <div class="input">
+                    <input type="search" placeholder="Search">
+                    <i class="icon-search"></i>
+                </div>
+                <div class="user">
+                    <img src="imgs/user.svg" alt="">
+                </div>
+            </header>
+            <nav>
+                <div>
+                    <ul>
+                        <li id="home-btn" class="nav-btn"><i class="icon-home"></i></li>
+                        <li id="team-btn" class="nav-btn"><i class="icon-users"></i></li>
+                        <li id="projects-btn" class="nav-btn"><i class="icon-folder"></i></li>
+                        <li id="tasks-btn" class="nav-btn"><i class="icon-tasks"></i></li>
+                        <li id="settings-btn" class="nav-btn"><i class="icon-gear"></i></li>
+                    </ul>
+                    <ul>
+                        <li id="help-btn" class="nav-btn"><i class="icon-info"></i></li>
+                        <li><i class="icon-exit"></i></li>
+                    </ul>
+                </div>
+            </nav>
+            <section id="schedule">
+                <div class="heading">
+                    <h1>Schedule.</h1>
+                    <p>Today’s tasks</p>
+                </div>
+                <div>
+                    <div class="tasks-box">
+                        <i class="icon-tasks"></i>
+                        <div class="tasks">
+                        </div>
+                    </div>
+                    <div class="done-tasks-box">
+                        <h2>
+                            <i class="icon-check-circle"></i>
+                            Done
+                        </h2>
+                        <div class="done-tasks">
+                        </div>
+                    </div>
+                </div>
+                <buttons>
+                    <input type="button" value="Add Task">
+                    <input type="button" value="Clear Done">
+                </buttons>
+            </section>
+            <section id="team" class="team">
             <div class="heading">
                 <h1>Our Team.</h1>
                 <p>Team members</p>
@@ -242,7 +274,10 @@
             </div>
         </section>
     </wrapper>
-
+        <overlay></overlay>
+        <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+        <script src="js/schedule-scipt.js"></script>     
+    
     <script src="./js/navigation.js"></script>
 </body>
 </html>
