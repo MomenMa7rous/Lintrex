@@ -384,13 +384,13 @@ nav div ul:nth-child(2) li:last-child{
 }
 
 /* Schedules section */
-#schedule{
+.schedule{
     display: flex;
     justify-content: center;
     align-content: flex-start;
     flex-wrap: wrap
 }
-#schedule>div:nth-child(2){
+.schedule>div:nth-child(2){
     display: flex;
     gap: 20px;
     flex: 1;
@@ -400,17 +400,17 @@ nav div ul:nth-child(2) li:last-child{
     margin: 0 auto;
     margin-top: 34px;
 }
-#schedule>div:nth-child(2)>div{
+.schedule>div:nth-child(2)>div{
     max-height: 70vh;
     background-color: white;
     box-shadow: var(--maibn-shadow);
     border-radius: 10px;
 }
-#schedule>div:nth-child(2) .tasks-box{
+.schedule>div:nth-child(2) .tasks-box{
     width: 60%;
     display: flex;
 }
-#schedule>div:nth-child(2) .tasks,#schedule>div:nth-child(2) .done-tasks{
+.schedule>div:nth-child(2) .tasks,.schedule>div:nth-child(2) .done-tasks{
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -418,34 +418,34 @@ nav div ul:nth-child(2) li:last-child{
     padding: 21px 21px 21px 0;
     overflow: auto;
 }
-#schedule>div:nth-child(2) .done-tasks{
+.schedule>div:nth-child(2) .done-tasks{
     padding: 21px 0;
 }
-#schedule>div:nth-child(2) .tasks-box>i{
+.schedule>div:nth-child(2) .tasks-box>i{
     display: flex;
     align-items: center;
     padding: 0 27px;
     color: var(--main-blue);
     font-size: 75px;
 }
-#schedule>div:nth-child(2) .done-tasks-box{
+.schedule>div:nth-child(2) .done-tasks-box{
     display: flex;
     flex-direction: column;
     width: 40%;
     padding: 20px 24px;
 }
-#schedule>div:nth-child(2) .done-tasks-box h2{
+.schedule>div:nth-child(2) .done-tasks-box h2{
     font-size: 20px;
     font-weight: 600;
 }
-#schedule>div:nth-child(2) .done-tasks-box i{
+.schedule>div:nth-child(2) .done-tasks-box i{
     font-size: 18px;
 }
-#schedule>div:nth-child(2) .task.done span:first-child{
+.schedule>div:nth-child(2) .task.done span:first-child{
     color: #676767;
     max-width: 140px;
 }
-#schedule>div:nth-child(2) .task.done span:first-child::after{
+.schedule>div:nth-child(2) .task.done span:first-child::after{
     content: "";
     position: absolute;
     left: 0;
@@ -455,58 +455,57 @@ nav div ul:nth-child(2) li:last-child{
     height: 1px;
     background-color: #676767;
 }
-#schedule buttons{
+.schedule buttons{
     display: flex;
     justify-content: center;
     gap: 20px;
-    /* height: 30px; */
     width: 100%;
     margin-top: 20px;
 }
-#schedule buttons input:first-child{
+.schedule buttons input:first-child{
     background-color: var(--main-blue);
     color: white;
-}#schedule buttons input:first-child:hover{
+}.schedule buttons input:first-child:hover{
     background-color: #5a66d1;
 }
-#schedule buttons input:last-child{
+.schedule buttons input:last-child{
     color: var(--main-red);
     border: 2px solid var(--main-red);
 }
-#schedule buttons input:last-child:hover{
+.schedule buttons input:last-child:hover{
     background-color: var(--main-red);
     color: white;
 }
 @media (max-width: 768px){
-    #schedule>div:nth-child(2) .tasks-box {
+    .schedule>div:nth-child(2) .tasks-box {
         flex-direction: column;
         align-items: center;
         width: 100%;
         max-height: 30vh;
     }
-    #schedule>div:nth-child(2) .tasks{
+    .schedule>div:nth-child(2) .tasks{
         padding: 21px;
         width: 100%;
     }
-    #schedule>div:nth-child(2) .task span:first-child{
+    .schedule>div:nth-child(2) .task span:first-child{
         max-width: 45vw;
     }
-    #schedule>div:nth-child(2) .tasks-box>i {
+    .schedule>div:nth-child(2) .tasks-box>i {
         justify-content: center;
         width: 100%;
         padding: 27px 27px 0 27px;
     }
-    #schedule>div:nth-child(2) .done-tasks-box {
+    .schedule>div:nth-child(2) .done-tasks-box {
         width: 100%;
         max-height: 25vh;
     }
-    #schedule>div:nth-child(2){
+    .schedule>div:nth-child(2){
         flex-direction: column;
     }
-    #schedule>div:nth-child(2)>div{
+    .schedule>div:nth-child(2)>div{
         min-height: 182px;
     }
-    #schedule>div:nth-child(2) .task{
+    .schedule>div:nth-child(2) .task{
         font-size: 14px;
     }
 }
@@ -629,4 +628,104 @@ section.help .actions a:hover {
     background-color: #5a66d1;
     border-color: #5a66d1;
     color: #fff;
+}
+/* Home Section */
+section.home {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section.home .home-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+section.home .home-grid.statistics div:not(.heading){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 24px 18px 12px 24px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--maibn-shadow);
+}
+section.home .home-grid.statistics div:nth-child(2),section.home .home-grid div:nth-child(3){
+    margin-bottom: 20px;
+}
+section.home .home-grid.statistics div.active{
+    background-color: var(--main-blue);
+    color: white;
+}
+section.home .home-grid.statistics div:not(.heading) p{
+    width: 100%;
+}
+section.home .home-grid.statistics div:not(.heading) p:nth-child(1){
+    font-size: 15px;
+    font-weight: 600;
+}
+section.home .home-grid.statistics div:not(.heading) p:nth-child(1) i{
+    margin-right: 5px;
+}
+section.home .home-grid.statistics div:not(.heading) p:nth-child(2){
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main-blue);
+}
+section.home .home-grid.statistics div.active p:nth-child(2){
+    color: white;
+}
+section.home .home-grid.statistics div:not(.heading) p:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
+}
+section.home .home-grid.statistics div:not(.heading) p input{
+    padding: 1px 20px;
+    background-color: var(--main-blue);
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+section.home .home-grid.statistics .active p input{
+    border-color: white;
+}
+@media (min-width: 768px){
+    section.home .heading{
+        text-align: left;
+        grid-column: span 3;
+    }
+    section.home .home-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    section.home .home-grid.statistics div:not(.heading){
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 1100px){
+    section.home .heading{
+        grid-column: span 2;
+    }
+    section.home  .home-grid{
+        display: grid;
+        grid-template-columns: repeat(13,1fr);
+        grid-template-rows: auto 1fr;
+    }
+
+    section.home .home-grid.statistics div:nth-child(2){
+        grid-column: 4 / span 4;
+    }
+    section.home .home-grid.statistics div:nth-child(3){
+        grid-column: 8 / span 3;
+    }
+    section.home .home-grid.statistics div:nth-child(4){
+        grid-column: 11/span 3;
+    }
+}
+@media (max-width: 1100px){
+    section.home  .home-grid.statistics div:not(.heading){
+        gap: 15px;
+    }
 }
