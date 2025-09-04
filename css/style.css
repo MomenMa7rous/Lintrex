@@ -120,6 +120,55 @@ pop-up input:last-child{
 pop-up input:last-child:hover{
     background-color: #313a8f;
 }
+.task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    gap: 20px;
+}
+.task span:first-child{
+    display: block;
+    max-width: 20vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+.check-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 18px;
+    min-height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    border: 1px solid var(--main-blue);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    transition: background-color .1s;
+}
+.check-box:hover{
+    background-color: var(--main-blue);
+}
+.check-box i{
+    font-size: 14px;
+}
+.checked{
+    background-color: #6874E8;
+}
+.main-bt{
+    display: block;
+    width: fit-content;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid var(--main-blue);
+}
 @media (max-width: 768px){
     .heading h1{
         font-size: 40px;
@@ -372,13 +421,6 @@ nav div ul:nth-child(2) li:last-child{
 #schedule>div:nth-child(2) .done-tasks{
     padding: 21px 0;
 }
-#schedule>div:nth-child(2) .task{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    gap: 20px;
-}
 #schedule>div:nth-child(2) .tasks-box>i{
     display: flex;
     align-items: center;
@@ -399,14 +441,6 @@ nav div ul:nth-child(2) li:last-child{
 #schedule>div:nth-child(2) .done-tasks-box i{
     font-size: 18px;
 }
-#schedule>div:nth-child(2) .task span:first-child{
-    display: block;
-    max-width: 20vw;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-}
 #schedule>div:nth-child(2) .task.done span:first-child{
     color: #676767;
     max-width: 140px;
@@ -421,28 +455,6 @@ nav div ul:nth-child(2) li:last-child{
     height: 1px;
     background-color: #676767;
 }
-#schedule>div:nth-child(2) .check-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 18px;
-    min-height: 18px;
-    max-width: 18px;
-    max-height: 18px;
-    border: 1px solid var(--main-blue);
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
-    transition: background-color .1s;
-}
-#schedule>div:nth-child(2) .check-box:hover{
-    background-color: var(--main-blue);
-}
-#schedule>div:nth-child(2) .check-box i{
-    font-size: 14px;
-}
-#schedule>div:nth-child(2) .checked{
-    background-color: #6874E8;
-}
 #schedule buttons{
     display: flex;
     justify-content: center;
@@ -450,18 +462,6 @@ nav div ul:nth-child(2) li:last-child{
     /* height: 30px; */
     width: 100%;
     margin-top: 20px;
-}
-#schedule buttons input{
-    display: block;
-    width: fit-content;
-    padding: 5px 20px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.2s;
-    border: 2px solid var(--main-blue);
 }
 #schedule buttons input:first-child{
     background-color: var(--main-blue);
