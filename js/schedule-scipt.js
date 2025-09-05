@@ -20,49 +20,54 @@ window.onload=function(){
 }
 //Add tasks
 const overlay=document.getElementsByTagName("overlay")[0];
-const popUp=document.querySelector("pop-up:first-of-type");
+const popUp1=document.querySelector("pop-up:first-of-type");
 const addTaskBt=document.querySelector("#schedule buttons input:first-child")
-const submitTaskForm=document.querySelector("pop-up form")
-const taskInput=document.querySelector("pop-up input[type=\"text\"]")
-const removePopUp=document.querySelector("pop-up img");
+const submitTaskForm=document.querySelector("pop-up:first-of-type form")
+const taskInput=document.querySelector("pop-up:first-of-type input[type=\"text\"]")
+const removePopUp=document.querySelectorAll("pop-up>img");
 
-addTaskBt.addEventListener("click",()=>{
+function funcPopUpVis(popUp,hide,e){
+    console.log(popUp,"1 ");
+    console.log(hide,"2 ");
+    console.log(e,"3 ");
+    if(hide){
+        overlay.style.display="none";
+        popUp.style.display="none";
+        return
+    }
     overlay.style.display="block";
     popUp.style.display="flex";
-    console.log("f");
+}
+removePopUp.forEach((ele)=>{
+    ele.addEventListener("click",funcPopUpVis.bind(null,ele.parentElement,true))
 })
-
-removePopUp.addEventListener("click",()=>{
-    overlay.style.display="none";
-    popUp.style.display="none";
-})
+addTaskBt.addEventListener("click",funcPopUpVis.bind(null,popUp1,false))
 
 submitTaskForm.addEventListener("submit",(e)=>{
     e.preventDefault()
-    overlay.style.display="none";
-    popUp.style.display="none";
     let task=`                            
     <p class="task">
     <span  title=${taskInput.value}>${taskInput.value}</span>
-    <span class="check-box"><i class="icon-check"></i></span>
+    <span class="check-box"><i class="icon-check sched"></i></span>
     </p>`
     taskCont.innerHTML+=task
     window.localStorage.tasks=taskCont.innerHTML
     taskInput.value = ""
+    funcPopUpVis(popUp1,true)
 })
 
 // Finish task
 const checkBox=document.querySelectorAll("#schedule>div:nth-child(2) .tasks .check-box")
 document.addEventListener("click",(e)=>{
     const doneTaskCont=document.querySelector("#schedule>div:nth-child(2) .done-tasks")
-    if(e.target.className==="icon-check" && e.target.parentElement.classList.length===1){
+    if(e.target.classList[1]==="sched" && e.target.parentElement.classList.length===1){
         ele=e.target.parentElement.parentElement
         console.log(taskCont);
         taskCont.removeChild(ele)
         doneTaskCont.innerHTML+=`
         <p class="task done">
             <span title=${ele.children[0].innerHTML}>${ele.children[0].innerHTML}</span>
-            <span class="check-box checked"><i class="icon-check"></i></span>
+            <span class="check-box checked"><i class="icon-check sched"></i></span>
         </p>
         `
         window.localStorage.tasks=taskCont.innerHTML
